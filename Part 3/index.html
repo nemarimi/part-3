@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bölüm 3</title>
+    <style>
+        .detailsdiv{ margin: auto; text-align: center; padding: 30px;  background-color: rgb(107, 142, 173); width: 400px; border: 1px solid rgb(63, 59, 122);}
+        details > summary{ width: 150px; color: rgb(92, 29, 100); background-color: #efccff; box-shadow: 1px 1px 2px solid #000000; padding: 4px; }
+        details > p , h1{ color: rgb(251, 242, 255); margin: auto; padding: 4px; box-shadow: 1px 1px 2px solid #000000;  display: inline; cursor: pointer; }
+        .datalist{ background-color: rgb(220, 245, 233); border: 2px solid gray; padding: 20px; margin: auto; width: 400px; height: 200px;}
+        .contenteditable{ background-color: pink; color: rgb(187, 0, 87); margin: auto; padding: 40px; text-align: center; width: 365px; border: 1px solid palevioletred;}
+        .bg{ background-color: rgb(192, 255, 200); width: 500px; margin: auto; text-align: center; padding: 5px; border: 1px solid black; padding-bottom: 30px;}
+        .content{ display: inline; }
+        .iframec{ width: 800px; height: 400px; }
+        .iclass{ background-color:#efccff; margin: auto; text-align: center; font-size: x-large; width: 1000px; border: 1px solid rgb(102, 0, 128); padding: 5px;}
+    </style>
+</head>
+<body>
+
+
+    <!--Details -->
+    <div>
+        <details class="detailsdiv">
+            <summary>Details</summary>
+            <br>
+            <h1>Lorem, ipsum. </h1>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, officiis.</p>
+            
+        </details>
+    </div>
+    <br>
+
+    <div class="detailsdiv">
+        <details>
+            <summary>Details Two</summary>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing</elit>
+                 <br>Iste, magni! Lorem ipsum dolor sit amet.</p>
+        </details>
+    </div>
+    <br>
+    <br>
+
+
+    <!--DATALİST-->
+
+    <div class="datalist">
+        <h2>Hoşgeldiniz!</h2>
+        <form action="../Bölüm 3/urbrowser.htm" method="get">
+        <label for="browser">Lütfen kullanmak istediğiniz tarayıcıyı seçiniz:  </label>
+        <input list="browsers" id="browser" name="browser">
+            <datalist id="browsers">
+                    <option value="Opera">Opera
+                    <option value="Chrome">Chrome
+                    <option value="Firefox">Firefox
+                    <option value="Safari">Safari
+                    <option value="Edge">Edge
+            </datalist>
+            <input type="submit" value="Kullan">
+        </form>
+        <p><strong> Note: </strong>if u change the ur own browser all cookies will gone.</p>
+    </div>
+    <br>
+    <br>
+
+
+    <!--Contenteditable (değiştirilebilir paragraf)-->
+
+    <div class="contenteditable">
+        <h3>Contenteditable ozellikler bir paragrafı değiştirebilmemize olanak sağlarlar.</h3>
+        <br>
+        <p contenteditable="true" class="content">Bunu değiştirebilirsiniz hihi.</p>
+    </div>
+    <br>
+    <br>
+
+
+    <!--İmage Maps-->
+
+    <div class="bg"
+    >
+        <h4>Şimdi bilgisayara tıkladığınızda sitesine gitmeniz gerekiyor.</h4>
+        <p>Tıkla!</p>
+        <img src="../Bölüm 3/images/workplace.jpg" alt="Workplace" usemap="#workmap" width="400px" height="380px">
+        <map name="workmap">
+            <area shape="rect" coords="34, 44, 270, 350" href="computer.htm" target="_blank" alt="Computer">
+        </map>
+        <br>
+        <p>Kahveye bir bakalım!</p>
+        <img src="../Bölüm 3/images/workplace.jpg" alt="Workplace" usemap="#coffee" width="400px" height="380">
+        <map name="coffee">
+            <area shape="circle" coords="337,300,44" href="coffee.htm" alt="Coffee" target="_blank">
+        </map>
+        <p>Bu sefer kruvasan!</p>
+        <img src="../Bölüm 3/images/frenchfood.jpg" alt="FrenchFood" usemap="#kru" width="400px" height="500">
+        <map name="kru">
+            <area shape="poly" coords="140,121,181,116,204,160,204,222,191,270,140,329,85,355,58,352,37,322,40,259,103,161,128,147" href="kruvasan.htm" alt="Kruvasan" target="_blank">
+        </map>
+    </div>
+    <br>
+    <br>
+
+
+    <!--IFRAME-->
+
+    <div class="iclass">
+        <h2>Iframe burada olacaktır</h2>
+        <br>
+        <iframe src="iframe.htm" frameborder="1" name="iframe_a" class="iframec" title="iframe example"></iframe>
+        <p><a href="https://tr.wikipedia.org/wiki/Anasayfa" target="iframe_a">Vikipedia</a></p>
+    </div>
+
+
+</body>
+</html>

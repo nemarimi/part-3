@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>örnekler</title>
+    <style>
+        .photo{ width: 300px; height: 200px; }
+        table tr td{ margin: auto; border: 1px solid black; padding: 4px; width: 800px; }
+        .mevcut{ text-align: center; }
+        .tkavram{ margin-left: 200px; border-bottom: 25px solid green; border-top: 5px solid red; border-left: 60px solid blue; width: 600; height: 200px; float: right;}
+    </style>
+    
+</head>
+<body>
+    
+    <!--Örnek 1 & 2-->
+
+    <div>
+        <details>
+            <summary>Html5 Eğitimi Devam Ediyor</summary>
+            <p>Eğitimin ilk gününde Html Etiketleri işleniyor.</p>
+        </details>
+    </div>
+
+     <hr>
+
+    <div>
+        <p>Link vermek ve kullanıcıyı ilgili linkeyönlendirmek içinkullanılan etiket a etiketidir. Temel anlamda 2 özellikle birlikte kullanılır:
+            <br>1-href => Kullanıcı linke tıkladığı zaman nerey yönlendirilsin?
+            <br>2-target => Link yeni bir sayfada/sekmede mi açılsın toksa buunduğunuz sayfa/sekmede mi açılsın?
+            <p><a href="https://www.google.com.tr" target="_blank">Google'ı Yeni Bir Sekmede Açar</a></p>
+            <p><a href="https://www.google.com.tr" target="_self">Google'ı İçinde Bulunduğunuz Sayfa/Sekmede Açar</a></p>
+            <p><a href="../Bölüm 3/temeletiket.htm" target="_blank">Temel Etiket Bildirimleri</a></p>
+            <p>
+                Sayfa üzerinde bir fotoğraf görsellemek içinse kullanılan element img elementidir. Temel anlamda 3 özellikle birlikte kullanılır.
+                <br>1-src => Source kelimesinin kısaltılmışıdır. Fotoğrafın kaynak yolunu belirtirsiniz.
+                <br>2-alt => Alternative Text kelimesinin kısaltılmışıdır. Fotoğraf tarayıcıda görünmezse onun yerine yazacak olan metni belirtirsiniz.
+                <br>3-title => Fotoğraf başlığı olarak kullanılır. Mouse ile fotoğrafın üzerine geldiğiniz zaman tooltip yardımıya kullanıcıya bildirim donülür.
+                <br>Artık tarayıcı "alt" attribute'unu (Öznitelik) title yerine de kullanabilmektedir.
+                <br>
+                <br>
+                <img src="../Bölüm 3/images/computerone.jpeg" alt="Computer" title="Computer Image" class="photo">
+            </p>
+        </p>
+    </div>
+    <hr>
+
+    <!-- Örnek 3 & 4  & 5 -->
+    
+    <div>
+        <data list id="dom">DOM
+            <option value="dom">Document Object Model</option>
+        </datalist>
+        <data list id="a">a'nın değeri
+            <option value="3">3</option>
+        </datalist>
+    </div>
+    <hr>
+    <div>
+        <p>Html elementleri içerisinde iki element bize sayfa üzerinde listeleme yapmak için olanak sunar.Bunlardan bir tanesi "ul" unordered list, bir tanesi ise "ol" ordered list'dir.
+            <br>Her iki listeleme tipinde de ortak bir element vardır. Bu element de "li" list item elementidir.
+            <br> Aşağıda örnek bir düzenli listeyi göstermektedir.
+        </p>
+        <ol type="1">
+            <li>Galatasaray</li>
+            <li>Beşiktaş</li>
+            <li>Trabzonspor</li>
+            <li>Bursaspor</li>
+        </ol>
+    </div>
+    <hr>
+    <p>Aşağıdaki örnek düzensiz bir listeyi göstermektedir.</p>
+    <div>
+        <p>k</p>
+        <ul>
+            <li>Introduction</li>
+            <li>Object Oriented Programming</li>
+            <li>Windows Programlama</li>
+            <li>SQL Server</li>
+            <li>ADO.NET
+                <ul type="circle">
+                    <li>Connected Mimari</li>
+                    <li>Disconnected Mimari</li>
+                    <li>XML</li>
+                </ul>
+            <li>Web Programlama
+                <ul type="circle">
+                    <li>Static WEB
+                        <ul type="square">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>Javascript - JQuery</li>
+                        </ul>
+                    <li>Dynamic WEB
+                        <ul type="square">
+                            <li>ASP.NET</li>
+                            <li>PHP</li>
+                        </ul>
+                    </li>
+                    </li>
+                </ul>
+            </li>
+            </li>
+        </ul>
+        <hr>
+        <div class="contenteditable">
+            <p contenteditable="true">Düzenlenilebilir İçerik</p>
+        </div>
+        <hr>
+        <p>Sayfa üzerinde bir takım verileri tablo formatında göstermek için size sunulan element "table" elementidir. "td" ve "tr" en cok kullanılan child elementleridir.
+            <br><strong>TD:</strong> kolon bilgisini, <strong>TR:</strong> ise satır bilgisini temsil eder.
+            <br>Bazı Özellikleri;
+                <ul>
+                    <li>Width => Tablonun genişliğini verir.</li>
+                    <li>Border =>  Tablonun iç ve dış çerçeveleri için bir boyut verilir.</li>
+                    <li>Cellspacing => ücrelerinbirbirine olan uzaklıklarını verir.</li>
+                    <li>Cellpadding => Hücre içerisindeki değerlerin dış çerçeveye olan uzaklığını verir.</li>
+                    <li>Colspan => Hücrelerin merge edilmesini -birlestirilmesini- sağlayan özelliktir. Aşağıdaki tabloda vermiş olduğumuz 2 değeri. o hücrenin 2 sütunlukmuş gibi davranmasını söyler. </li>
+                    <li>Rowspan => Satırları merge -birlestirmesini- sağlar.</li>
+                </ul>
+        </p>
+        <br>
+        <table>
+            <tr>
+                <td>ADI</td>
+                <td>SOYADI</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="mevcut">Bu tablo içerisinde sınıf mevcudu yer almaktadır.</td>
+            </tr>
+            <tr>
+                <td>Ahmet</td>
+                <td>Yıldız</td>
+            </tr>
+            <tr>
+                <td>Ali Veli</td>
+                <td>Tanır</td>
+            </tr>
+            <tr>
+                <td>Erhan</td>
+                <td>Ölçek</td>
+            </tr>
+        </table>
+    </div>
+    <hr>
+    <div>
+        <p>Div "division" kelimesinin kısaltılmışı olarak HTML dünyasına giriş yapmıştır.Asıl anlamı tasarımsal alanlar'dır.Birbirinden bağımsız olarak çok daha görsel ve kontrol edilmesi kolay tasarım alanlarını oluşturma ihtiyacı sonrası hayatımıza girmiştir. Özellikle
+            <br>tablolar ile yapılan tasarımlar uzun zaman ve performans istemi div kullanımının önemini gün geçtikçe arttırmaktadır.
+            <br>
+            <br>Bazı Temel Kavramlar;
+                <ul>
+                    <li>id => Site üzerinde yer alan ozel bir kontrolu ifade etmek için kullanılan ozniteliktir. Bir ID benzersizdir ve W3C kurallarına göre kullanılan bir ID başka bir html elementi tarafından kullanılamaz.</li>
+                    <li>width => Bir elementin genişliğini ifade eder.</li>
+                    <li>height => Bir elementin yüksekliğini ifade eder.</li>
+                    <li>margin-left => Bir elementin sol taraftan dış çerçeveye olan uzaklığını temsil eder.</li>
+                    <li>margin-right => Bir elementin sağ taraftan dış çerçeveye olan uzaklığını temsil eder.<strong>NOT: Bir elemente margin-left ve margin-right değeri olarak auto girerseniz, o element çözünürüğünüze göre sayfanın ortasına yerleştirir.</strong></li>
+                    <li>Float => İlgili tasarımsal alanın hangi yöne dayalı olarak tasarıma dahil edileceği belirtilir. Varsayılan orak bir div boyutu ne olursa olsun, o yükseklikte alanı kendisine ayırır. Birden fazla tasarımsal alanı yan yana eklemek için float değerine bir atama yaparsınız.</li>
+                </ul>
+        </p>
+        <img src="..//Bölüm 3/images/computerone.jpeg" alt="" class="tkavram">
+        
+    </div>
+    <hr>
+    <div>
+        <br>
+        <br>    
+        <p>İchigo Kurosaki</p>
+        <iframe src="../Bölüm 3/video/video.mp4" frameborder="3"></iframe>
+        <br>
+        <p>Bankai</p>
+        <iframe src="../Bölüm 3/video/video.mp4" frameborder="3"></iframe>
+        <br>
+        <br>
+        <p>Bleach</p>
+        <iframe src="../Bölüm 3/video/video.mp4" frameborder="3"> </iframe>
+    </div>
+    <br>
+    <br>
+    <div>
+        <p>saate tıklayın!</p>
+        <img src="../Bölüm 3/images/saat.jpg" alt="" usemap="#saat" width="300px" height="300px">
+        <map name="saat" >
+            <area shape="circle" coords="175,170,30,30" href="https://saatkac.info.tr/" target="_blank">
+        </map>
+    </div>
+</body>
+</html>
